@@ -10,7 +10,7 @@ export default function DemoExpiradaPage() {
             <polyline points="12 6 12 12 16 14" />
           </svg>
         </div>
-        <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+        <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-4">
           Demo privada
         </p>
         <h1 className="text-[#1A2240] text-3xl font-light leading-tight mb-4">

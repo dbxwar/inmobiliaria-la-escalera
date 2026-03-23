@@ -57,12 +57,12 @@ export default async function PropiedadesPage({
       <NavbarInner />
       <main className="pt-20 min-h-screen bg-[#F0F4F8]">
         {/* Header */}
-        <div className="bg-[#1A2240] py-12 px-6 lg:px-10">
+        <div className="bg-[#F0F4F8] py-12 px-6 lg:px-10 border-b border-[#C8D4E0]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-3">
+            <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-3">
               Comunidad Valenciana
             </p>
-            <h1 className="text-[#F0F4F8] text-3xl sm:text-4xl font-light">{heading}</h1>
+            <h1 className="text-[#1A2240] text-3xl sm:text-4xl font-light">{heading}</h1>
           </div>
         </div>
 
@@ -106,8 +106,8 @@ export default async function PropiedadesPage({
                 href={`/propiedades?${operacion ? `operacion=${operacion}&` : ""}tipo=${t}`}
                 className={`px-4 py-1.5 text-sm border transition-colors whitespace-nowrap ${
                   tipo === t
-                    ? "bg-[#FFFFFF] text-[#1A2240] border-[#FFFFFF]"
-                    : "border-[#C8D4E0] text-[#1A2240] hover:border-[#FFFFFF]"
+                    ? "bg-[#C9A84C] text-[#1A2240] border-[#C9A84C]"
+                    : "border-[#C8D4E0] text-[#1A2240] hover:border-[#C9A84C]"
                 }`}
               >
                 {tipoLabels[t]}
@@ -153,39 +153,39 @@ function PropertyCard({ propiedad }: { propiedad: Propiedad }) {
             alt={propiedad.titulo}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <span className="absolute top-3 left-3 bg-[#FFFFFF] text-[#1A2240] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 capitalize">
+          <span className="absolute top-3 left-3 bg-[#C9A84C] text-[#1A2240] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 capitalize">
             {propiedad.operacion}
           </span>
           <div className="absolute bottom-0 left-0 right-0 bg-[#1A2240]/80 py-2 px-3">
-            <span className="text-[#FFFFFF] font-semibold text-lg">
+            <span className="text-[#C9A84C] font-semibold text-lg">
               {formatPrice(propiedad.precio)}
             </span>
           </div>
         </div>
         <div className="p-4">
-          <h3 className="text-[#1A2240] font-medium text-sm leading-snug mb-2 group-hover:text-[#FFFFFF] transition-colors line-clamp-2">
+          <h3 className="text-[#1A2240] font-medium text-sm leading-snug mb-2 group-hover:text-[#C9A84C] transition-colors line-clamp-2">
             {propiedad.titulo}
           </h3>
           <div className="flex items-center gap-1 text-[#6B7280] text-xs mb-3">
-            <MapPin size={12} className="text-[#FFFFFF]" />
+            <MapPin size={12} className="text-[#C9A84C]" />
             <span>{propiedad.municipio}</span>
           </div>
           <div className="flex items-center gap-4 border-t border-[#E4ECF4] pt-3">
             {propiedad.habitaciones != null && (
               <span className="flex items-center gap-1 text-xs text-[#1A2240]">
-                <Bed size={12} className="text-[#FFFFFF]" />
+                <Bed size={12} className="text-[#C9A84C]" />
                 {propiedad.habitaciones}
               </span>
             )}
             {propiedad.banos != null && (
               <span className="flex items-center gap-1 text-xs text-[#1A2240]">
-                <Bath size={12} className="text-[#FFFFFF]" />
+                <Bath size={12} className="text-[#C9A84C]" />
                 {propiedad.banos}
               </span>
             )}
             {propiedad.metros_cuadrados != null && (
               <span className="flex items-center gap-1 text-xs text-[#1A2240]">
-                <Maximize2 size={12} className="text-[#FFFFFF]" />
+                <Maximize2 size={12} className="text-[#C9A84C]" />
                 {propiedad.metros_cuadrados} m²
               </span>
             )}

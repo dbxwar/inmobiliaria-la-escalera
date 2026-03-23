@@ -53,10 +53,10 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
       <NavbarInner />
 
       {/* Barra sticky móvil — siempre visible en la parte inferior */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#EDE8DD] flex">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#E4ECF4] flex">
         <a
           href={`tel:${config.telefonoHref}`}
-          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 text-[#1B2B4B] hover:bg-[#F5F0E8] transition-colors"
+          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 text-[#1A2240] hover:bg-[#F0F4F8] transition-colors"
         >
           <Phone size={18} />
           <span className="text-[10px] tracking-wide uppercase font-medium">Llamar</span>
@@ -76,27 +76,27 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-[#1B2B4B] text-[#F5F0E8]"
+          className="flex-1 flex flex-col items-center justify-center gap-0.5 py-3 bg-[#1A2240] text-[#F0F4F8]"
         >
           <Calendar size={18} />
           <span className="text-[10px] tracking-wide uppercase font-medium">Visita</span>
         </a>
       </div>
 
-      <main className="pt-20 pb-20 lg:pb-0 bg-[#F5F0E8]">
+      <main className="pt-20 pb-20 lg:pb-0 bg-[#F0F4F8]">
 
         {/* ── Hero: fotos + info clave ── */}
         <section className="max-w-7xl mx-auto px-6 lg:px-10 py-8">
 
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-[#6B7280] mb-5">
-            <Link href="/" className="hover:text-[#1B2B4B] transition-colors">Inicio</Link>
+            <Link href="/" className="hover:text-[#1A2240] transition-colors">Inicio</Link>
             <span>/</span>
-            <Link href="/propiedades" className="hover:text-[#1B2B4B] transition-colors capitalize">
+            <Link href="/propiedades" className="hover:text-[#1A2240] transition-colors capitalize">
               {propiedad.operacion}
             </Link>
             <span>/</span>
-            <span className="text-[#1B2B4B]">{propiedad.municipio}</span>
+            <span className="text-[#1A2240]">{propiedad.municipio}</span>
           </nav>
 
           {/* Layout 70 / 30 */}
@@ -123,7 +123,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
               </div>
 
               {/* Título */}
-              <h1 className="text-[#1B2B4B] text-xl lg:text-2xl font-light leading-snug">
+              <h1 className="text-[#1A2240] text-xl lg:text-2xl font-light leading-snug">
                 {propiedad.titulo}
               </h1>
 
@@ -185,7 +185,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
 
             {propiedad.descripcion && (
               <div className="mb-10">
-                <h2 className="text-[#1B2B4B] text-lg font-medium mb-4 flex items-center gap-2">
+                <h2 className="text-[#1A2240] text-lg font-medium mb-4 flex items-center gap-2">
                   <span className="w-8 h-[2px] bg-[#C9A84C]" />
                   Descripción
                 </h2>
@@ -197,7 +197,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
 
             {propiedad.caracteristicas?.length > 0 && (
               <div className="mb-10">
-                <h2 className="text-[#1B2B4B] text-lg font-medium mb-4 flex items-center gap-2">
+                <h2 className="text-[#1A2240] text-lg font-medium mb-4 flex items-center gap-2">
                   <span className="w-8 h-[2px] bg-[#C9A84C]" />
                   Equipamiento
                 </h2>
@@ -205,7 +205,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
                   {propiedad.caracteristicas.map((feat) => (
                     <span
                       key={feat}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-[#1B2B4B] text-sm border border-[#DDD8CE]"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-[#1A2240] text-sm border border-[#C8D4E0]"
                     >
                       <Check size={12} className="text-[#C9A84C]" />
                       {feat}
@@ -223,7 +223,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
         {similares.length > 0 && (
           <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              <h2 className="text-[#1B2B4B] text-2xl font-light mb-8">Propiedades similares</h2>
+              <h2 className="text-[#1A2240] text-2xl font-light mb-8">Propiedades similares</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {similares.map((p) => {
                   const img = p.imagenes?.[0] || "/images/prop-1.jpg";
@@ -234,7 +234,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
                     <Link
                       key={p.id}
                       href={`/propiedad/${p.slug}`}
-                      className="group bg-[#F5F0E8] overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                      className="group bg-[#F0F4F8] overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                     >
                       <div className="relative h-44 overflow-hidden">
                         <img
@@ -245,7 +245,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
                       </div>
                       <div className="p-4">
                         <p className="text-[#C9A84C] font-semibold">{pr}</p>
-                        <p className="text-[#1B2B4B] font-medium text-sm mt-1 line-clamp-2">{p.titulo}</p>
+                        <p className="text-[#1A2240] font-medium text-sm mt-1 line-clamp-2">{p.titulo}</p>
                         <p className="text-[#6B7280] text-xs mt-1">{p.municipio}</p>
                       </div>
                     </Link>
@@ -266,10 +266,10 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
 
 function Stat({ icon, value, label }: { icon: React.ReactNode; value: string; label: string }) {
   return (
-    <div className="flex items-center gap-2 bg-white px-3 py-2.5 border border-[#EDE8DD]">
+    <div className="flex items-center gap-2 bg-white px-3 py-2.5 border border-[#E4ECF4]">
       <span className="text-[#C9A84C]">{icon}</span>
       <div>
-        <p className="text-[#1B2B4B] text-sm font-semibold leading-none">{value}</p>
+        <p className="text-[#1A2240] text-sm font-semibold leading-none">{value}</p>
         <p className="text-[#9CA3AF] text-[10px] uppercase tracking-wide mt-0.5">{label}</p>
       </div>
     </div>
@@ -278,7 +278,7 @@ function Stat({ icon, value, label }: { icon: React.ReactNode; value: string; la
 
 function Badge({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white text-[#1B2B4B] text-xs border border-[#DDD8CE]">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white text-[#1A2240] text-xs border border-[#C8D4E0]">
       <span className="text-[#C9A84C]">{icon}</span>
       {label}
     </span>
@@ -288,15 +288,15 @@ function Badge({ icon, label }: { icon: React.ReactNode; label: string }) {
 const energyColors: Record<string, string> = {
   A: "bg-[#00A651] text-white",
   B: "bg-[#4CB848] text-white",
-  C: "bg-[#BFD730] text-[#1B2B4B]",
-  D: "bg-[#FFF200] text-[#1B2B4B]",
-  E: "bg-[#FFB81C] text-[#1B2B4B]",
+  C: "bg-[#BFD730] text-[#1A2240]",
+  D: "bg-[#FFF200] text-[#1A2240]",
+  E: "bg-[#FFB81C] text-[#1A2240]",
   F: "bg-[#F37021] text-white",
   G: "bg-[#ED1C24] text-white",
 };
 
 function EnergyBadge({ cert }: { cert: string }) {
-  const colorClass = energyColors[cert] ?? "bg-[#DDD8CE] text-[#1B2B4B]";
+  const colorClass = energyColors[cert] ?? "bg-[#C8D4E0] text-[#1A2240]";
   return (
     <span className={`inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold ${colorClass}`}>
       <Zap size={11} />

@@ -11,7 +11,7 @@ export async function FeaturedProperties() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
           <div>
-            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-3">
+            <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-3">
               Selección exclusiva
             </p>
             <h2 className="text-[#1A2240] text-3xl sm:text-4xl font-light leading-tight text-balance">
@@ -20,7 +20,7 @@ export async function FeaturedProperties() {
           </div>
           <Link
             href="/propiedades"
-            className="text-sm text-[#1A2240] border-b border-[#FFFFFF] pb-0.5 hover:text-[#FFFFFF] transition-colors whitespace-nowrap self-start sm:self-auto"
+            className="text-sm text-[#1A2240] border-b border-[#C9A84C] pb-0.5 hover:text-[#C9A84C] transition-colors whitespace-nowrap self-start sm:self-auto"
           >
             Ver todas las propiedades →
           </Link>
@@ -59,20 +59,20 @@ function PropertyCard({ propiedad }: { propiedad: Propiedad }) {
             alt={propiedad.titulo}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <span className="absolute top-3 left-3 bg-[#FFFFFF] text-[#1A2240] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 capitalize">
+          <span className="absolute top-3 left-3 bg-[#C9A84C] text-[#1A2240] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 capitalize">
             {propiedad.operacion}
           </span>
           <div className="absolute bottom-0 left-0 right-0 bg-[#1A2240]/80 py-2 px-3">
-            <span className="text-[#FFFFFF] font-semibold text-lg">{precio}</span>
+            <span className="text-[#C9A84C] font-semibold text-lg">{precio}</span>
           </div>
         </div>
 
         <div className="p-5">
-          <h3 className="text-[#1A2240] font-medium text-base leading-snug mb-2 group-hover:text-[#FFFFFF] transition-colors line-clamp-2">
+          <h3 className="text-[#1A2240] font-medium text-base leading-snug mb-2 group-hover:text-[#C9A84C] transition-colors line-clamp-2">
             {propiedad.titulo}
           </h3>
           <div className="flex items-center gap-1 text-[#6B7280] text-xs mb-4">
-            <MapPin size={12} className="text-[#FFFFFF]" />
+            <MapPin size={12} className="text-[#C9A84C]" />
             <span>{propiedad.municipio}</span>
           </div>
 
@@ -96,7 +96,7 @@ function PropertyCard({ propiedad }: { propiedad: Propiedad }) {
 function Stat({ icon, value, label }: { icon: React.ReactNode; value: number; label: string }) {
   return (
     <div className="flex items-center gap-1.5 text-[#1A2240]">
-      <span className="text-[#FFFFFF]">{icon}</span>
+      <span className="text-[#C9A84C]">{icon}</span>
       <span className="text-sm font-medium">{value}</span>
       <span className="text-[10px] text-[#6B7280] uppercase tracking-wide">{label}</span>
     </div>

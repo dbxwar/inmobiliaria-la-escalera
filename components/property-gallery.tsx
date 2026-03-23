@@ -88,7 +88,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
               onClick={() => setActiveIndex(i)}
               className={`flex-none w-20 h-14 md:w-24 md:h-16 overflow-hidden transition-all duration-200 ${
                 i === activeIndex
-                  ? "ring-2 ring-[#FFFFFF] opacity-100"
+                  ? "ring-2 ring-[#C9A84C] opacity-100"
                   : "opacity-60 hover:opacity-100"
               }`}
             >

@@ -93,7 +93,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
   return (
     <div className="bg-white border border-[#C8D4E0] p-6">
       <h2 className="text-[#1A2240] text-lg font-medium mb-1 flex items-center gap-2">
-        <span className="w-8 h-[2px] bg-[#FFFFFF]" />
+        <span className="w-8 h-[2px] bg-[#C9A84C]" />
         Calculadora de hipoteca
       </h2>
       <p className="text-xs text-[#6B7280] mb-6 ml-10">Estimación orientativa. Consulta con tu banco.</p>
@@ -139,11 +139,11 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
             min={5} max={60} step={1}
             value={entradaPct}
             onChange={(e) => setEntradaPct(Number(e.target.value))}
-            className="w-full accent-[#FFFFFF]"
+            className="w-full accent-[#C9A84C]"
           />
           <div className="flex justify-between text-[10px] text-[#9CA3AF] mt-0.5">
             <span>5 %</span>
-            <span className="text-[#FFFFFF] font-medium">Mínimo recomendado: 20 %</span>
+            <span className="text-[#C9A84C] font-medium">Mínimo recomendado: 20 %</span>
             <span>60 %</span>
           </div>
         </div>
@@ -159,7 +159,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
             min={5} max={30} step={5}
             value={anos}
             onChange={(e) => setAnos(Number(e.target.value))}
-            className="w-full accent-[#FFFFFF]"
+            className="w-full accent-[#C9A84C]"
           />
           <div className="flex justify-between text-[10px] text-[#9CA3AF] mt-0.5">
             <span>5</span><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span>
@@ -229,13 +229,13 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
       {/* Resultado principal */}
       <div className="mt-6 bg-[#1A2240] p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-center sm:text-left">
-          <p className="text-[#FFFFFF] text-xs tracking-widest uppercase mb-1">Cuota mensual estimada</p>
+          <p className="text-[#C9A84C] text-xs tracking-widest uppercase mb-1">Cuota mensual estimada</p>
           <p className="text-[#F0F4F8] text-4xl font-semibold">{formatEur(cuotaMensual)}<span className="text-lg font-light">/mes</span></p>
           <p className="text-[#F0F4F8]/50 text-xs mt-1">Préstamo {formatEur(prestamo)} · {anos} años · {tasa} % TIN</p>
         </div>
         <div className="text-center sm:text-right">
           <p className="text-[#F0F4F8]/60 text-xs mb-1">Total intereses</p>
-          <p className="text-[#FFFFFF] text-xl font-semibold">{formatEur(totalIntereses)}</p>
+          <p className="text-[#C9A84C] text-xl font-semibold">{formatEur(totalIntereses)}</p>
           <p className="text-[#F0F4F8]/60 text-xs mt-1">Total devuelto: {formatEur(totalPagado)}</p>
         </div>
       </div>
@@ -245,7 +245,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
         <button
           type="button"
           onClick={() => setExpanded(!expanded)}
-          className="w-full flex items-center justify-between text-sm text-[#1A2240] font-medium py-3 border-b border-[#C8D4E0] hover:text-[#FFFFFF] transition-colors"
+          className="w-full flex items-center justify-between text-sm text-[#1A2240] font-medium py-3 border-b border-[#C8D4E0] hover:text-[#C9A84C] transition-colors"
         >
           <span>Desglose de gastos e impuestos</span>
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -275,7 +275,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
             </div>
 
             <div className="mt-4 flex gap-2 p-3 bg-[#F0F4F8] text-xs text-[#6B7280]">
-              <Info size={14} className="shrink-0 text-[#FFFFFF] mt-0.5" />
+              <Info size={14} className="shrink-0 text-[#C9A84C] mt-0.5" />
               <p>
                 Cálculo orientativo. Los tipos impositivos son los generales vigentes en 2024 para cada comunidad autónoma.
                 Pueden existir reducciones para jóvenes, familia numerosa, VPO u otras bonificaciones autonómicas.
@@ -314,7 +314,7 @@ function Row({
   return (
     <div className={`flex justify-between ${sub ? "text-[#6B7280]" : "text-[#1A2240]"}`}>
       <span className={`${sub ? "pl-3 text-xs" : ""} ${bold ? "font-semibold" : ""}`}>{label}</span>
-      <span className={`${bold ? "font-semibold" : ""} ${accent ? "text-[#FFFFFF]" : ""}`}>{value}</span>
+      <span className={`${bold ? "font-semibold" : ""} ${accent ? "text-[#C9A84C]" : ""}`}>{value}</span>
     </div>
   );
 }

@@ -23,36 +23,36 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section id="nosotros" className="bg-[#1A2240] py-20 lg:py-28">
+    <section id="nosotros" className="bg-[#F0F4F8] py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+          <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-4">
             Nuestra propuesta de valor
           </p>
-          <h2 className="text-[#F0F4F8] text-3xl sm:text-4xl font-light leading-tight text-balance">
+          <h2 className="text-[#1A2240] text-3xl sm:text-4xl font-light leading-tight text-balance">
             ¿Por qué elegirnos?
           </h2>
-          <div className="mt-5 w-12 h-px bg-[#FFFFFF] mx-auto" />
+          <div className="mt-5 w-12 h-px bg-[#C9A84C] mx-auto" />
         </div>
 
         {/* Feature blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#131929]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#C8D4E0]">
           {features.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="bg-[#1A2240] hover:bg-[#131929] transition-colors duration-300 p-10 lg:p-12 flex flex-col items-start group"
+              className="bg-[#F0F4F8] hover:bg-white transition-colors duration-300 p-10 lg:p-12 flex flex-col items-start group"
             >
               {/* Icon circle */}
-              <div className="w-14 h-14 border border-[#FFFFFF]/40 flex items-center justify-center mb-8 group-hover:border-[#FFFFFF] group-hover:bg-[#FFFFFF]/10 transition-all duration-300">
-                <Icon size={24} className="text-[#FFFFFF]" />
+              <div className="w-14 h-14 border border-[#C9A84C]/40 flex items-center justify-center mb-8 group-hover:border-[#C9A84C] group-hover:bg-[#C9A84C]/10 transition-all duration-300">
+                <Icon size={24} className="text-[#C9A84C]" />
               </div>
 
-              <h3 className="text-[#F0F4F8] text-xl font-medium mb-4">{title}</h3>
-              <p className="text-[#F0F4F8]/60 text-sm leading-relaxed">{description}</p>
+              <h3 className="text-[#1A2240] text-xl font-medium mb-4">{title}</h3>
+              <p className="text-[#1A2240]/60 text-sm leading-relaxed">{description}</p>
 
               {/* Decorative line */}
-              <div className="mt-8 w-8 h-px bg-[#FFFFFF] group-hover:w-16 transition-all duration-300" />
+              <div className="mt-8 w-8 h-px bg-[#C9A84C] group-hover:w-16 transition-all duration-300" />
             </div>
           ))}
         </div>
@@ -66,8 +66,8 @@ export function WhyChooseUs() {
             { value: "3", label: "Oficinas en la Comunitat" },
           ].map(({ value, label }) => (
             <div key={label}>
-              <div className="text-[#FFFFFF] text-3xl sm:text-4xl font-semibold mb-2">{value}</div>
-              <div className="text-[#F0F4F8]/50 text-xs tracking-widest uppercase">{label}</div>
+              <div className="text-[#C9A84C] text-3xl sm:text-4xl font-semibold mb-2">{value}</div>
+              <div className="text-[#1A2240]/50 text-xs tracking-widest uppercase">{label}</div>
             </div>
           ))}
         </div>

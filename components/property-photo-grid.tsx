@@ -113,7 +113,7 @@ export function PropertyPhotoGrid({ images }: Props) {
               onClick={() => setActive(i)}
               className={`flex-none w-16 h-11 overflow-hidden transition-all ${
                 i === active
-                  ? "ring-2 ring-[#FFFFFF] opacity-100"
+                  ? "ring-2 ring-[#C9A84C] opacity-100"
                   : "opacity-50 hover:opacity-90"
               }`}
             >
@@ -162,7 +162,7 @@ export function PropertyPhotoGrid({ images }: Props) {
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setLightboxIndex(i); }}
                 className={`flex-none w-14 h-10 overflow-hidden transition-all ${
-                  i === lightboxIndex ? "ring-2 ring-[#FFFFFF] opacity-100" : "opacity-50 hover:opacity-80"
+                  i === lightboxIndex ? "ring-2 ring-[#C9A84C] opacity-100" : "opacity-50 hover:opacity-80"
                 }`}
               >
                 <img src={img.src} alt="" className="w-full h-full object-cover" />
