@@ -30,7 +30,7 @@ export function NavbarInner() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[#F0F4F8]/80 hover:text-[#2E6DA4] text-sm tracking-wide transition-colors duration-200"
+              className="text-[#F0F4F8]/80 hover:text-[#FFFFFF] text-sm tracking-wide transition-colors duration-200"
             >
               {item.label}
             </Link>
@@ -40,7 +40,7 @@ export function NavbarInner() {
         {/* CTA */}
         <Link
           href="/#contacto"
-          className="hidden md:inline-flex items-center px-5 py-2 border border-[#2E6DA4] text-[#2E6DA4] text-sm tracking-wider uppercase hover:bg-[#2E6DA4] hover:text-[#1A2240] transition-all duration-200"
+          className="hidden md:inline-flex items-center px-5 py-2 border border-[#FFFFFF] text-[#FFFFFF] text-sm tracking-wider uppercase hover:bg-[#FFFFFF] hover:text-[#1A2240] transition-all duration-200"
         >
           Contactar
         </Link>
@@ -69,7 +69,7 @@ export function NavbarInner() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[#F0F4F8]/80 hover:text-[#2E6DA4] text-sm tracking-wide transition-colors"
+              className="text-[#F0F4F8]/80 hover:text-[#FFFFFF] text-sm tracking-wide transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {item.label}

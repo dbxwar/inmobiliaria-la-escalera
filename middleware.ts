@@ -2,6 +2,17 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function middleware(request: NextRequest) {
+  // ── Demo expirada ──────────────────────────────────────────
+  const expiresAt = process.env.DEMO_EXPIRES_AT
+  if (expiresAt) {
+    const isExpired = Date.now() > new Date(expiresAt).getTime()
+    const isExpiredPage = request.nextUrl.pathname === '/demo-expirada'
+    if (isExpired && !isExpiredPage) {
+      return NextResponse.redirect(new URL('/demo-expirada', request.url))
+    }
+  }
+
+  // ── Auth admin ─────────────────────────────────────────────
   let supabaseResponse = NextResponse.next({ request })
 
   const supabase = createServerClient(
@@ -40,5 +51,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|images/).*)'],
 }

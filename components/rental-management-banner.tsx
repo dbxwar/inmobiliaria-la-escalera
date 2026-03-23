@@ -6,11 +6,11 @@ export function RentalManagementBanner() {
     <section className="bg-[#F0F4F8] py-16 lg:py-20 border-t border-[#C8D4E0]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-10">
         <div className="flex items-start gap-6 lg:max-w-2xl">
-          <div className="shrink-0 w-14 h-14 border border-[#2E6DA4]/40 flex items-center justify-center">
-            <KeyRound size={24} className="text-[#2E6DA4]" />
+          <div className="shrink-0 w-14 h-14 border border-[#FFFFFF]/40 flex items-center justify-center">
+            <KeyRound size={24} className="text-[#FFFFFF]" />
           </div>
           <div>
-            <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-2">
+            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-2">
               Servicio para propietarios
             </p>
             <h2 className="text-[#1A2240] text-2xl sm:text-3xl font-light leading-tight mb-3">

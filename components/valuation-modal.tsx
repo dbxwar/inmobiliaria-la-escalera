@@ -48,7 +48,7 @@ Dirección: ${form.direccion}${form.mensaje ? `\nMensaje: ${form.mensaje}` : ""}
               <X size={20} />
             </button>
 
-            <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-2">
+            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-2">
               Valoración gratuita
             </p>
             <h3 className="text-[#1A2240] text-2xl font-semibold mb-6">

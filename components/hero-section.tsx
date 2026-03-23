@@ -27,7 +27,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-10 text-center">
         {/* Eyebrow */}
-        <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+        <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
           Comunitat Valenciana
         </p>
 
@@ -35,7 +35,7 @@ export function HeroSection() {
         <h1 className="text-[#F0F4F8] text-4xl sm:text-5xl lg:text-6xl font-light leading-tight text-balance mb-4">
           Encuentra tu propiedad
           <br />
-          <span className="text-[#2E6DA4] font-semibold">ideal en el Mediterráneo</span>
+          <span className="text-[#FFFFFF] font-semibold">ideal en el Mediterráneo</span>
         </h1>
 
         <p className="text-[#F0F4F8]/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
@@ -69,7 +69,7 @@ export function HeroSection() {
           </div>
 
           {/* Search Button */}
-          <button className="w-full flex items-center justify-center gap-2 bg-[#2E6DA4] hover:bg-[#b8943d] text-[#1A2240] font-semibold tracking-widest uppercase text-sm py-3.5 transition-colors duration-200">
+          <button className="w-full flex items-center justify-center gap-2 bg-[#FFFFFF] hover:bg-[#b8943d] text-[#1A2240] font-semibold tracking-widest uppercase text-sm py-3.5 transition-colors duration-200">
             <Search size={16} />
             Buscar propiedades
           </button>
@@ -79,7 +79,7 @@ export function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-70">
         <span className="text-[#F0F4F8] text-xs tracking-widest uppercase">Explorar</span>
-        <div className="w-px h-10 bg-[#2E6DA4] animate-pulse" />
+        <div className="w-px h-10 bg-[#FFFFFF] animate-pulse" />
       </div>
     </section>
   );
@@ -105,7 +105,7 @@ function SelectField({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full appearance-none bg-[#E4ECF4] border border-[#C8D4E0] text-[#1A2240] text-sm py-2.5 pl-3 pr-8 focus:outline-none focus:border-[#2E6DA4] transition-colors"
+          className="w-full appearance-none bg-[#E4ECF4] border border-[#C8D4E0] text-[#1A2240] text-sm py-2.5 pl-3 pr-8 focus:outline-none focus:border-[#FFFFFF] transition-colors"
         >
           {options.map((o) => (
             <option key={o} value={o}>

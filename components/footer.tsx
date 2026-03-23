@@ -26,16 +26,16 @@ export function Footer() {
 
             {/* Contact info */}
             <div className="flex flex-col gap-3">
-              <a href={`tel:${config.telefonoHref}`} className="flex items-center gap-2.5 text-[#F0F4F8]/70 hover:text-[#2E6DA4] text-sm transition-colors">
-                <Phone size={14} className="text-[#2E6DA4]" />
+              <a href={`tel:${config.telefonoHref}`} className="flex items-center gap-2.5 text-[#F0F4F8]/70 hover:text-[#FFFFFF] text-sm transition-colors">
+                <Phone size={14} className="text-[#FFFFFF]" />
                 {config.telefono}
               </a>
-              <a href={`mailto:${config.email}`} className="flex items-center gap-2.5 text-[#F0F4F8]/70 hover:text-[#2E6DA4] text-sm transition-colors">
-                <Mail size={14} className="text-[#2E6DA4]" />
+              <a href={`mailto:${config.email}`} className="flex items-center gap-2.5 text-[#F0F4F8]/70 hover:text-[#FFFFFF] text-sm transition-colors">
+                <Mail size={14} className="text-[#FFFFFF]" />
                 {config.email}
               </a>
               <div className="flex items-center gap-2.5 text-[#F0F4F8]/70 text-sm">
-                <MapPin size={14} className="text-[#2E6DA4] shrink-0" />
+                <MapPin size={14} className="text-[#FFFFFF] shrink-0" />
                 {config.direccion}
               </div>
             </div>
@@ -44,7 +44,7 @@ export function Footer() {
           {/* Links */}
           {Object.entries(links).map(([heading, items]) => (
             <div key={heading}>
-              <h4 className="text-[#2E6DA4] text-xs tracking-[0.3em] uppercase font-medium mb-5">
+              <h4 className="text-[#FFFFFF] text-xs tracking-[0.3em] uppercase font-medium mb-5">
                 {heading}
               </h4>
               <ul className="flex flex-col gap-3">
@@ -81,7 +81,7 @@ export function Footer() {
             <a
               key={i}
               href={href}
-              className="w-8 h-8 border border-[#131929] flex items-center justify-center text-[#F0F4F8]/50 hover:border-[#2E6DA4] hover:text-[#2E6DA4] transition-all duration-200"
+              className="w-8 h-8 border border-[#131929] flex items-center justify-center text-[#F0F4F8]/50 hover:border-[#FFFFFF] hover:text-[#FFFFFF] transition-all duration-200"
               aria-label="Red social"
             >
               <Icon size={14} />

@@ -76,11 +76,11 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
 
               {/* Ubicación */}
               <div className="flex items-center gap-1.5 text-sm text-[#6B7280]">
-                <MapPin size={14} className="text-[#2E6DA4] shrink-0" />
+                <MapPin size={14} className="text-[#FFFFFF] shrink-0" />
                 <span>{propiedad.municipio}</span>
                 {propiedad.direccion && (
                   <>
-                    <span className="text-[#2E6DA4]">·</span>
+                    <span className="text-[#FFFFFF]">·</span>
                     <span className="truncate">{propiedad.direccion}</span>
                   </>
                 )}
@@ -92,7 +92,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
               </h1>
 
               {/* Precio */}
-              <p className="text-[#2E6DA4] text-3xl font-semibold">{precio}</p>
+              <p className="text-[#FFFFFF] text-3xl font-semibold">{precio}</p>
 
               {/* Stats clave */}
               <div className="grid grid-cols-2 gap-2">
@@ -150,7 +150,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
             {propiedad.descripcion && (
               <div className="mb-10">
                 <h2 className="text-[#1A2240] text-lg font-medium mb-4 flex items-center gap-2">
-                  <span className="w-8 h-[2px] bg-[#2E6DA4]" />
+                  <span className="w-8 h-[2px] bg-[#FFFFFF]" />
                   Descripción
                 </h2>
                 <div className="text-[#4B5563] leading-relaxed whitespace-pre-line">
@@ -162,7 +162,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
             {propiedad.caracteristicas?.length > 0 && (
               <div className="mb-10">
                 <h2 className="text-[#1A2240] text-lg font-medium mb-4 flex items-center gap-2">
-                  <span className="w-8 h-[2px] bg-[#2E6DA4]" />
+                  <span className="w-8 h-[2px] bg-[#FFFFFF]" />
                   Equipamiento
                 </h2>
                 <div className="flex flex-wrap gap-2">
@@ -171,7 +171,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
                       key={feat}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-[#1A2240] text-sm border border-[#C8D4E0]"
                     >
-                      <Check size={12} className="text-[#2E6DA4]" />
+                      <Check size={12} className="text-[#FFFFFF]" />
                       {feat}
                     </span>
                   ))}
@@ -208,7 +208,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
                         />
                       </div>
                       <div className="p-4">
-                        <p className="text-[#2E6DA4] font-semibold">{pr}</p>
+                        <p className="text-[#FFFFFF] font-semibold">{pr}</p>
                         <p className="text-[#1A2240] font-medium text-sm mt-1 line-clamp-2">{p.titulo}</p>
                         <p className="text-[#6B7280] text-xs mt-1">{p.municipio}</p>
                       </div>
@@ -231,7 +231,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ id: s
 function Stat({ icon, value, label }: { icon: React.ReactNode; value: string; label: string }) {
   return (
     <div className="flex items-center gap-2 bg-white px-3 py-2.5 border border-[#E4ECF4]">
-      <span className="text-[#2E6DA4]">{icon}</span>
+      <span className="text-[#FFFFFF]">{icon}</span>
       <div>
         <p className="text-[#1A2240] text-sm font-semibold leading-none">{value}</p>
         <p className="text-[#9CA3AF] text-[10px] uppercase tracking-wide mt-0.5">{label}</p>
@@ -243,7 +243,7 @@ function Stat({ icon, value, label }: { icon: React.ReactNode; value: string; la
 function Badge({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white text-[#1A2240] text-xs border border-[#C8D4E0]">
-      <span className="text-[#2E6DA4]">{icon}</span>
+      <span className="text-[#FFFFFF]">{icon}</span>
       {label}
     </span>
   );

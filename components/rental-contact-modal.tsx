@@ -29,7 +29,7 @@ Dirección: ${form.direccion}${form.mensaje ? `\nMensaje: ${form.mensaje}` : ""}
     <>
       <button
         onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center px-8 py-4 bg-[#2E6DA4] text-[#1A2240] text-sm tracking-widest uppercase font-medium hover:bg-[#b8963e] transition-colors duration-200"
+        className="inline-flex items-center justify-center px-8 py-4 bg-[#FFFFFF] text-[#1A2240] text-sm tracking-widest uppercase font-medium hover:bg-[#b8963e] transition-colors duration-200"
       >
         Solicitar información
       </button>
@@ -45,7 +45,7 @@ Dirección: ${form.direccion}${form.mensaje ? `\nMensaje: ${form.mensaje}` : ""}
               <X size={20} />
             </button>
 
-            <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-2">
+            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-2">
               Gestión de alquiler
             </p>
             <h3 className="text-[#1A2240] text-2xl font-semibold mb-6">

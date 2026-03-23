@@ -8,7 +8,7 @@ export function CtaBanner() {
       className="relative bg-[#E4ECF4] py-20 lg:py-24 overflow-hidden"
     >
       {/* Decorative gold bar */}
-      <div className="absolute left-0 top-0 h-full w-1.5 bg-[#2E6DA4]" />
+      <div className="absolute left-0 top-0 h-full w-1.5 bg-[#FFFFFF]" />
 
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.04]"
@@ -20,7 +20,7 @@ export function CtaBanner() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Text */}
         <div className="lg:max-w-2xl text-center lg:text-left">
-          <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+          <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
             Vende con nosotros
           </p>
           <h2 className="text-[#1A2240] text-3xl sm:text-4xl lg:text-5xl font-light leading-tight text-balance mb-5">

@@ -41,7 +41,7 @@ export function SimilarProperties() {
         {/* Header */}
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-2">
+            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-2">
               Te puede interesar
             </p>
             <h2 className="text-[#1A2240] text-2xl sm:text-3xl font-light">
@@ -50,7 +50,7 @@ export function SimilarProperties() {
           </div>
           <Link
             href="#"
-            className="hidden sm:inline text-sm text-[#1A2240] border-b border-[#2E6DA4] pb-0.5 hover:text-[#2E6DA4] transition-colors"
+            className="hidden sm:inline text-sm text-[#1A2240] border-b border-[#FFFFFF] pb-0.5 hover:text-[#FFFFFF] transition-colors"
           >
             Ver más propiedades
           </Link>
@@ -73,7 +73,7 @@ export function SimilarProperties() {
                 />
                 {/* Price overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-[#1A2240]/80 py-2 px-3">
-                  <span className="text-[#2E6DA4] font-semibold text-lg">
+                  <span className="text-[#FFFFFF] font-semibold text-lg">
                     {prop.price}€
                   </span>
                 </div>
@@ -81,11 +81,11 @@ export function SimilarProperties() {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-[#1A2240] font-medium text-base leading-snug mb-2 group-hover:text-[#2E6DA4] transition-colors line-clamp-2">
+                <h3 className="text-[#1A2240] font-medium text-base leading-snug mb-2 group-hover:text-[#FFFFFF] transition-colors line-clamp-2">
                   {prop.title}
                 </h3>
                 <div className="flex items-center gap-1 text-[#6B7280] text-xs mb-4">
-                  <MapPin size={12} className="text-[#2E6DA4]" />
+                  <MapPin size={12} className="text-[#FFFFFF]" />
                   <span>{prop.location}</span>
                 </div>
 
@@ -104,7 +104,7 @@ export function SimilarProperties() {
         <div className="mt-8 text-center sm:hidden">
           <Link
             href="#"
-            className="text-sm text-[#1A2240] border-b border-[#2E6DA4] pb-0.5 hover:text-[#2E6DA4] transition-colors"
+            className="text-sm text-[#1A2240] border-b border-[#FFFFFF] pb-0.5 hover:text-[#FFFFFF] transition-colors"
           >
             Ver más propiedades
           </Link>
@@ -117,7 +117,7 @@ export function SimilarProperties() {
 function Stat({ icon, value, label }: { icon: React.ReactNode; value: number; label: string }) {
   return (
     <div className="flex items-center gap-1.5 text-[#1A2240]">
-      <span className="text-[#2E6DA4]">{icon}</span>
+      <span className="text-[#FFFFFF]">{icon}</span>
       <span className="text-sm font-medium">{value}</span>
       <span className="text-[10px] text-[#6B7280] uppercase tracking-wide">{label}</span>
     </div>

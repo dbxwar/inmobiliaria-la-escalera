@@ -82,7 +82,7 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#2E6DA4] text-[#1A2240] placeholder:text-[#6B7280]"
+            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#FFFFFF] text-[#1A2240] placeholder:text-[#6B7280]"
           />
           <Input
             type="email"
@@ -90,18 +90,18 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
-            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#2E6DA4] text-[#1A2240] placeholder:text-[#6B7280]"
+            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#FFFFFF] text-[#1A2240] placeholder:text-[#6B7280]"
           />
           <Textarea
             placeholder="Mensaje"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             rows={4}
-            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#2E6DA4] text-[#1A2240] placeholder:text-[#6B7280] resize-none"
+            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#FFFFFF] text-[#1A2240] placeholder:text-[#6B7280] resize-none"
           />
           <Button
             type="submit"
-            className="w-full bg-[#2E6DA4] hover:bg-[#b89a43] text-[#1A2240] font-medium tracking-wide py-3 h-auto"
+            className="w-full bg-[#FFFFFF] hover:bg-[#b89a43] text-[#1A2240] font-medium tracking-wide py-3 h-auto"
           >
             Enviar mensaje
           </Button>
