@@ -5,22 +5,22 @@
 
 export const config = {
   // Identidad
-  agencia: "Olcina Inmobiliaria",
-  descripcionSeo: "Tu inmobiliaria de confianza en Alicante. Compra, vende y alquila pisos, chalets y villas en Ibi, Elche, Alcoy y toda la provincia de Alicante.",
+  agencia: "Inmobiliaria La Escalera",
+  descripcionSeo: "Tu inmobiliaria de confianza en la Comunitat Valenciana. Descubre propiedades en venta y alquiler en Valencia, Alicante y Castellón.",
   logo: "/images/logo.png",
   anio: "2025",
 
   // Contacto
-  telefono: "+34 965 52 58 68",
-  telefonoHref: "+34965525868",
-  whatsapp: "34691531834", // móvil
-  email: "central@olcinainmobiliaria.com",
-  direccion: "Calle Ramón y Cajal, 2 — 03440 Ibí, Alicante",
+  telefono: "+34 960 000 000",
+  telefonoHref: "+34960000000",
+  whatsapp: "34960000000", // sin + ni espacios
+  email: "info@laescalera.es",
+  direccion: "Calle del Mar, 15 — 46001 Valencia",
 
-  // Redes sociales
+  // Redes sociales (pon la URL completa o "#" si no aplica)
   redes: {
-    instagram: "https://www.instagram.com/inmobiliariaolcina/",
-    facebook: "https://www.facebook.com/olcinainmobiliaria/",
-    linkedin: "https://es.linkedin.com/company/olcina-inmobiliaria",
+    instagram: "#",
+    facebook: "#",
+    linkedin: "#",
   },
 };

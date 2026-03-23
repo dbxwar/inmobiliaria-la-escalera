@@ -75,20 +75,20 @@ const steps = [
 
 export default function GestionAlquilerPage() {
   return (
-    <main className="min-h-screen bg-[#F0F4F8]">
+    <main className="min-h-screen bg-[#F5F0E8]">
       <NavbarInner />
 
       {/* Hero */}
-      <section className="bg-[#1A2240] pt-36 pb-20 lg:pt-44 lg:pb-28">
+      <section className="bg-[#1B2B4B] pt-36 pb-20 lg:pt-44 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-5">
+          <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-5">
             Servicio para propietarios
           </p>
-          <h1 className="text-[#F0F4F8] text-4xl sm:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mb-6">
+          <h1 className="text-[#F5F0E8] text-4xl sm:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mb-6">
             Gestión integral{" "}
             <span className="font-semibold">de tu alquiler</span>
           </h1>
-          <p className="text-[#F0F4F8]/60 text-lg leading-relaxed max-w-2xl mb-10">
+          <p className="text-[#F5F0E8]/60 text-lg leading-relaxed max-w-2xl mb-10">
             Nos encargamos de todo el proceso: desde encontrar el inquilino perfecto hasta gestionar cada incidencia del día a día. Tú solo cobras a fin de mes.
           </p>
           <RentalContactModal />
@@ -99,26 +99,26 @@ export default function GestionAlquilerPage() {
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
-            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+            <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-4">
               Todo incluido
             </p>
-            <h2 className="text-[#1A2240] text-3xl sm:text-4xl font-light">
+            <h2 className="text-[#1B2B4B] text-3xl sm:text-4xl font-light">
               ¿Qué incluye el servicio?
             </h2>
-            <div className="mt-5 w-12 h-px bg-[#FFFFFF] mx-auto" />
+            <div className="mt-5 w-12 h-px bg-[#C9A84C] mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#C8D4E0]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#DDD8CE]">
             {services.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
-                className="bg-[#F0F4F8] hover:bg-white transition-colors duration-300 p-8 lg:p-10 flex flex-col group"
+                className="bg-[#F5F0E8] hover:bg-white transition-colors duration-300 p-8 lg:p-10 flex flex-col group"
               >
-                <div className="w-12 h-12 border border-[#FFFFFF]/40 flex items-center justify-center mb-6 group-hover:border-[#FFFFFF] group-hover:bg-[#FFFFFF]/10 transition-all duration-300">
-                  <Icon size={20} className="text-[#FFFFFF]" />
+                <div className="w-12 h-12 border border-[#C9A84C]/40 flex items-center justify-center mb-6 group-hover:border-[#C9A84C] group-hover:bg-[#C9A84C]/10 transition-all duration-300">
+                  <Icon size={20} className="text-[#C9A84C]" />
                 </div>
-                <h3 className="text-[#1A2240] text-lg font-medium mb-3">{title}</h3>
-                <p className="text-[#1A2240]/60 text-sm leading-relaxed">{description}</p>
+                <h3 className="text-[#1B2B4B] text-lg font-medium mb-3">{title}</h3>
+                <p className="text-[#1B2B4B]/60 text-sm leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -126,25 +126,25 @@ export default function GestionAlquilerPage() {
       </section>
 
       {/* How it works */}
-      <section className="bg-[#1A2240] py-20 lg:py-28">
+      <section className="bg-[#1B2B4B] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
-            <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+            <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-4">
               Sin complicaciones
             </p>
-            <h2 className="text-[#F0F4F8] text-3xl sm:text-4xl font-light">
+            <h2 className="text-[#F5F0E8] text-3xl sm:text-4xl font-light">
               ¿Cómo funciona?
             </h2>
-            <div className="mt-5 w-12 h-px bg-[#FFFFFF] mx-auto" />
+            <div className="mt-5 w-12 h-px bg-[#C9A84C] mx-auto" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map(({ number, title, description }) => (
               <div key={number} className="flex flex-col">
-                <div className="text-[#FFFFFF] text-4xl font-semibold mb-4">{number}</div>
-                <div className="w-8 h-px bg-[#FFFFFF] mb-5" />
-                <h3 className="text-[#F0F4F8] text-lg font-medium mb-3">{title}</h3>
-                <p className="text-[#F0F4F8]/50 text-sm leading-relaxed">{description}</p>
+                <div className="text-[#C9A84C] text-4xl font-semibold mb-4">{number}</div>
+                <div className="w-8 h-px bg-[#C9A84C] mb-5" />
+                <h3 className="text-[#F5F0E8] text-lg font-medium mb-3">{title}</h3>
+                <p className="text-[#F5F0E8]/50 text-sm leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
@@ -152,16 +152,16 @@ export default function GestionAlquilerPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-24 bg-[#E4ECF4]">
+      <section className="py-20 lg:py-24 bg-[#EDE8DD]">
         <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
-          <p className="text-[#FFFFFF] tracking-[0.4em] uppercase text-xs font-medium mb-4">
+          <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-4">
             Sin compromiso
           </p>
-          <h2 className="text-[#1A2240] text-3xl sm:text-4xl font-light leading-tight mb-5">
+          <h2 className="text-[#1B2B4B] text-3xl sm:text-4xl font-light leading-tight mb-5">
             ¿Listo para alquilar{" "}
             <span className="font-semibold">sin preocupaciones?</span>
           </h2>
-          <p className="text-[#1A2240]/60 text-base leading-relaxed mb-8">
+          <p className="text-[#1B2B4B]/60 text-base leading-relaxed mb-8">
             Contáctanos hoy y te explicamos cómo podemos gestionar tu propiedad. Primera consulta totalmente gratuita.
           </p>
           <RentalContactModal />

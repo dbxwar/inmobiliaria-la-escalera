@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { config } from '@/lib/config'
+import { WhatsAppButton } from '@/components/whatsapp-button'
 import './globals.css'
 
 const geist = Geist({
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${geist.variable} font-sans antialiased`}>
         {children}
+        <WhatsAppButton />
         <Analytics />
       </body>
     </html>
