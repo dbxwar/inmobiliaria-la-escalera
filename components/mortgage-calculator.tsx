@@ -301,6 +301,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
           Hablar sobre hipoteca
         </a>
       </div>
+      </div>
     </div>
   );
 }
