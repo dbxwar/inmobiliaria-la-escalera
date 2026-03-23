@@ -47,7 +47,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
       <div className="relative">
         {/* Main Image */}
         <div
-          className="relative aspect-[4/3] md:aspect-[16/9] overflow-hidden cursor-pointer bg-[#1B2B4B]"
+          className="relative aspect-[4/3] md:aspect-[16/9] overflow-hidden cursor-pointer bg-[#1A2240]"
           onClick={() => openLightbox(activeIndex)}
         >
           <img
@@ -56,26 +56,26 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
             className="w-full h-full object-contain"
           />
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1B2B4B]/40 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1A2240]/40 via-transparent to-transparent pointer-events-none" />
           
           {/* Navigation arrows */}
           <button
             onClick={(e) => { e.stopPropagation(); goTo(activeIndex - 1); }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center text-[#1B2B4B] transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center text-[#1A2240] transition-colors"
             aria-label="Anterior"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); goTo(activeIndex + 1); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center text-[#1B2B4B] transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center text-[#1A2240] transition-colors"
             aria-label="Siguiente"
           >
             <ChevronRight size={20} />
           </button>
 
           {/* Counter */}
-          <span className="absolute bottom-4 right-4 bg-[#1B2B4B]/80 text-[#F5F0E8] text-xs px-3 py-1.5 tracking-wider">
+          <span className="absolute bottom-4 right-4 bg-[#1A2240]/80 text-[#F0F4F8] text-xs px-3 py-1.5 tracking-wider">
             {activeIndex + 1} / {images.length}
           </span>
         </div>
@@ -88,7 +88,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
               onClick={() => setActiveIndex(i)}
               className={`flex-none w-20 h-14 md:w-24 md:h-16 overflow-hidden transition-all duration-200 ${
                 i === activeIndex
-                  ? "ring-2 ring-[#C9A84C] opacity-100"
+                  ? "ring-2 ring-[#2E6DA4] opacity-100"
                   : "opacity-60 hover:opacity-100"
               }`}
             >
@@ -105,7 +105,7 @@ export function PropertyGallery({ images }: PropertyGalleryProps) {
       {/* Lightbox */}
       {lightboxOpen && (
         <div
-          className="fixed inset-0 z-50 bg-[#1B2B4B]/95 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-[#1A2240]/95 flex items-center justify-center"
           onClick={() => setLightboxOpen(false)}
         >
           {/* Close button */}

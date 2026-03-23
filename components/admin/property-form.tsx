@@ -112,7 +112,7 @@ function SortableImage({
     >
       <Image src={image.preview} alt="Preview" fill className="object-cover" />
       {index === 0 && (
-        <span className="absolute top-1.5 left-1.5 bg-[#C9A84C] text-[#1B2B4B] text-[10px] font-semibold px-2 py-0.5 z-10">
+        <span className="absolute top-1.5 left-1.5 bg-[#2E6DA4] text-[#1A2240] text-[10px] font-semibold px-2 py-0.5 z-10">
           Principal
         </span>
       )}

@@ -83,7 +83,7 @@ export function PropertiesTable({ propiedades }: { propiedades: Propiedad[] }) {
                           className="object-cover"
                         />
                       ) : (
-                        <div className="h-full w-full bg-[#DDD8CE]" />
+                        <div className="h-full w-full bg-[#C8D4E0]" />
                       )}
                     </div>
                   </TableCell>
@@ -158,7 +158,7 @@ export function PropertiesTable({ propiedades }: { propiedades: Propiedad[] }) {
               {property.imagenes?.[0] ? (
                 <Image src={property.imagenes[0]} alt={property.titulo} fill className="object-cover" />
               ) : (
-                <div className="h-full w-full bg-[#DDD8CE]" />
+                <div className="h-full w-full bg-[#C8D4E0]" />
               )}
             </div>
             <div className="flex-1 min-w-0">

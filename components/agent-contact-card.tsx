@@ -35,7 +35,7 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
   return (
     <div className="bg-white shadow-lg sticky top-28">
       {/* Agent Info */}
-      <div className="p-6 border-b border-[#EDE8DD]">
+      <div className="p-6 border-b border-[#E4ECF4]">
         <div className="flex items-center gap-4">
           <img
             src={agent.photo}
@@ -43,7 +43,7 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
             className="w-16 h-16 rounded-full object-cover"
           />
           <div>
-            <h4 className="text-[#1B2B4B] font-medium">{agent.name}</h4>
+            <h4 className="text-[#1A2240] font-medium">{agent.name}</h4>
             <p className="text-[#6B7280] text-sm">{agent.title}</p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
         <div className="flex flex-col gap-3 mt-5">
           <a
             href={`tel:${agent.phone}`}
-            className="flex items-center justify-center gap-2 w-full py-3 bg-[#1B2B4B] text-[#F5F0E8] font-medium tracking-wide hover:bg-[#243656] transition-colors"
+            className="flex items-center justify-center gap-2 w-full py-3 bg-[#1A2240] text-[#F0F4F8] font-medium tracking-wide hover:bg-[#131929] transition-colors"
           >
             <Phone size={16} />
             Llamar ahora
@@ -73,7 +73,7 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
 
       {/* Contact Form */}
       <form onSubmit={handleSubmit} className="p-6">
-        <h5 className="text-[#1B2B4B] font-medium mb-4">Solicitar información</h5>
+        <h5 className="text-[#1A2240] font-medium mb-4">Solicitar información</h5>
         
         <div className="flex flex-col gap-4">
           <Input
@@ -82,7 +82,7 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="bg-[#F5F0E8] border-0 focus-visible:ring-[#C9A84C] text-[#1B2B4B] placeholder:text-[#6B7280]"
+            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#2E6DA4] text-[#1A2240] placeholder:text-[#6B7280]"
           />
           <Input
             type="email"
@@ -90,18 +90,18 @@ export function AgentContactCard({ agent, propertyRef }: AgentContactCardProps) 
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
-            className="bg-[#F5F0E8] border-0 focus-visible:ring-[#C9A84C] text-[#1B2B4B] placeholder:text-[#6B7280]"
+            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#2E6DA4] text-[#1A2240] placeholder:text-[#6B7280]"
           />
           <Textarea
             placeholder="Mensaje"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             rows={4}
-            className="bg-[#F5F0E8] border-0 focus-visible:ring-[#C9A84C] text-[#1B2B4B] placeholder:text-[#6B7280] resize-none"
+            className="bg-[#F0F4F8] border-0 focus-visible:ring-[#2E6DA4] text-[#1A2240] placeholder:text-[#6B7280] resize-none"
           />
           <Button
             type="submit"
-            className="w-full bg-[#C9A84C] hover:bg-[#b89a43] text-[#1B2B4B] font-medium tracking-wide py-3 h-auto"
+            className="w-full bg-[#2E6DA4] hover:bg-[#b89a43] text-[#1A2240] font-medium tracking-wide py-3 h-auto"
           >
             Enviar mensaje
           </Button>

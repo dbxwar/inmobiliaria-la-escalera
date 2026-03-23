@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { config } from '@/lib/config'
 import './globals.css'
 
 const geist = Geist({
@@ -9,8 +10,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: 'Valencia Estates — Inmobiliaria de Lujo en la Comunidad Valenciana',
-  description: 'Descubre propiedades exclusivas en la Comunidad Valenciana. Villas, apartamentos y fincas de lujo en Valencia, Alicante y Castellón.',
+  title: `${config.agencia} — Comunidad Valenciana`,
+  description: config.descripcionSeo,
   generator: 'v0.app',
   icons: {
     icon: [

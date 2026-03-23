@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, PlusCircle, Settings, LogOut, Building2, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { config } from "@/lib/config";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -24,7 +25,7 @@ export function AdminSidebar() {
         <Link href="/admin" className="flex items-center gap-2">
           <Home className="h-5 w-5 text-gold" />
           <span className="text-lg font-semibold tracking-tight text-beige">
-            Valencia Estates
+            {config.agencia}
           </span>
         </Link>
         <Button
@@ -56,7 +57,7 @@ export function AdminSidebar() {
         <div className="flex items-center gap-2 px-6 py-6 border-b border-sidebar-border">
           <Home className="h-6 w-6 text-gold" />
           <span className="text-xl font-semibold tracking-tight text-beige">
-            Valencia Estates
+            {config.agencia}
           </span>
         </div>
 

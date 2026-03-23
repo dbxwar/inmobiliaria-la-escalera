@@ -28,7 +28,7 @@ export default function SettingsPage() {
                 <FieldLabel htmlFor="agencyName">Nombre de la Agencia</FieldLabel>
                 <Input
                   id="agencyName"
-                  defaultValue="Valencia Estates"
+                  defaultValue="Inmobiliaria La Escalera"
                   className="bg-white"
                 />
               </Field>

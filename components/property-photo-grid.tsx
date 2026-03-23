@@ -59,7 +59,7 @@ export function PropertyPhotoGrid({ images }: Props) {
     <>
       {/* ── Foto principal + flechas ── */}
       <div
-        className="relative aspect-[4/3] overflow-hidden bg-[#1B2B4B] group"
+        className="relative aspect-[4/3] overflow-hidden bg-[#1A2240] group"
         onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
         onTouchEnd={(e) => {
           if (touchStartX.current === null) return;
@@ -80,14 +80,14 @@ export function PropertyPhotoGrid({ images }: Props) {
           <>
             <button
               onClick={() => goActive(-1)}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/70 hover:bg-white text-[#1B2B4B] flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100 opacity-100"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/70 hover:bg-white text-[#1A2240] flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100 opacity-100"
               aria-label="Foto anterior"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={() => goActive(1)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/70 hover:bg-white text-[#1B2B4B] flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100 opacity-100"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/70 hover:bg-white text-[#1A2240] flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 md:opacity-0 md:group-hover:opacity-100 opacity-100"
               aria-label="Foto siguiente"
             >
               <ChevronRight size={18} />
@@ -113,7 +113,7 @@ export function PropertyPhotoGrid({ images }: Props) {
               onClick={() => setActive(i)}
               className={`flex-none w-16 h-11 overflow-hidden transition-all ${
                 i === active
-                  ? "ring-2 ring-[#C9A84C] opacity-100"
+                  ? "ring-2 ring-[#2E6DA4] opacity-100"
                   : "opacity-50 hover:opacity-90"
               }`}
             >
@@ -162,7 +162,7 @@ export function PropertyPhotoGrid({ images }: Props) {
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setLightboxIndex(i); }}
                 className={`flex-none w-14 h-10 overflow-hidden transition-all ${
-                  i === lightboxIndex ? "ring-2 ring-[#C9A84C] opacity-100" : "opacity-50 hover:opacity-80"
+                  i === lightboxIndex ? "ring-2 ring-[#2E6DA4] opacity-100" : "opacity-50 hover:opacity-80"
                 }`}
               >
                 <img src={img.src} alt="" className="w-full h-full object-cover" />

@@ -16,7 +16,7 @@ export default async function AdminPropertiesPage() {
             {propiedades.length} propiedad{propiedades.length !== 1 ? "es" : ""} en total
           </p>
         </div>
-        <Button asChild className="bg-[#1B2B4B] hover:bg-[#1B2B4B]/90">
+        <Button asChild className="bg-[#1A2240] hover:bg-[#1A2240]/90">
           <Link href="/admin/nueva">
             <PlusCircle className="mr-2 h-4 w-4" />
             Nueva Propiedad

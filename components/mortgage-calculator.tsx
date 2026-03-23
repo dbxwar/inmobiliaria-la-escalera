@@ -90,9 +90,9 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
   };
 
   return (
-    <div className="bg-white border border-[#DDD8CE] p-6">
-      <h2 className="text-[#1B2B4B] text-lg font-medium mb-1 flex items-center gap-2">
-        <span className="w-8 h-[2px] bg-[#C9A84C]" />
+    <div className="bg-white border border-[#C8D4E0] p-6">
+      <h2 className="text-[#1A2240] text-lg font-medium mb-1 flex items-center gap-2">
+        <span className="w-8 h-[2px] bg-[#2E6DA4]" />
         Calculadora de hipoteca
       </h2>
       <p className="text-xs text-[#6B7280] mb-6 ml-10">Estimación orientativa. Consulta con tu banco.</p>
@@ -101,13 +101,13 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
 
         {/* Precio */}
         <div>
-          <label className="block text-xs font-medium text-[#1B2B4B] mb-1">Precio de compra</label>
+          <label className="block text-xs font-medium text-[#1A2240] mb-1">Precio de compra</label>
           <div className="relative">
             <input
               type="number"
               value={precio}
               onChange={(e) => setPrecio(Number(e.target.value))}
-              className="w-full border border-[#DDD8CE] px-3 py-2 text-sm pr-8 focus:outline-none focus:border-[#1B2B4B]"
+              className="w-full border border-[#C8D4E0] px-3 py-2 text-sm pr-8 focus:outline-none focus:border-[#1A2240]"
             />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6B7280] text-sm">€</span>
           </div>
@@ -115,11 +115,11 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
 
         {/* Comunidad */}
         <div>
-          <label className="block text-xs font-medium text-[#1B2B4B] mb-1">Comunidad autónoma</label>
+          <label className="block text-xs font-medium text-[#1A2240] mb-1">Comunidad autónoma</label>
           <select
             value={comunidad}
             onChange={(e) => setComunidad(e.target.value)}
-            className="w-full border border-[#DDD8CE] px-3 py-2 text-sm focus:outline-none focus:border-[#1B2B4B] bg-white"
+            className="w-full border border-[#C8D4E0] px-3 py-2 text-sm focus:outline-none focus:border-[#1A2240] bg-white"
           >
             {Object.entries(COMUNIDADES).map(([key, { label }]) => (
               <option key={key} value={key}>{label}</option>
@@ -130,7 +130,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
         {/* Entrada */}
         <div className="sm:col-span-2">
           <div className="flex justify-between mb-1">
-            <label className="text-xs font-medium text-[#1B2B4B]">Entrada</label>
+            <label className="text-xs font-medium text-[#1A2240]">Entrada</label>
             <span className="text-xs text-[#6B7280]">{entradaPct} % — {formatEur(entrada)}</span>
           </div>
           <input
@@ -138,11 +138,11 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
             min={5} max={60} step={1}
             value={entradaPct}
             onChange={(e) => setEntradaPct(Number(e.target.value))}
-            className="w-full accent-[#C9A84C]"
+            className="w-full accent-[#2E6DA4]"
           />
           <div className="flex justify-between text-[10px] text-[#9CA3AF] mt-0.5">
             <span>5 %</span>
-            <span className="text-[#C9A84C] font-medium">Mínimo recomendado: 20 %</span>
+            <span className="text-[#2E6DA4] font-medium">Mínimo recomendado: 20 %</span>
             <span>60 %</span>
           </div>
         </div>
@@ -150,7 +150,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
         {/* Plazo */}
         <div>
           <div className="flex justify-between mb-1">
-            <label className="text-xs font-medium text-[#1B2B4B]">Plazo</label>
+            <label className="text-xs font-medium text-[#1A2240]">Plazo</label>
             <span className="text-xs text-[#6B7280]">{anos} años</span>
           </div>
           <input
@@ -158,7 +158,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
             min={5} max={30} step={5}
             value={anos}
             onChange={(e) => setAnos(Number(e.target.value))}
-            className="w-full accent-[#C9A84C]"
+            className="w-full accent-[#2E6DA4]"
           />
           <div className="flex justify-between text-[10px] text-[#9CA3AF] mt-0.5">
             <span>5</span><span>10</span><span>15</span><span>20</span><span>25</span><span>30</span>
@@ -167,7 +167,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
 
         {/* Tipo interés */}
         <div>
-          <label className="block text-xs font-medium text-[#1B2B4B] mb-1">Tipo de interés</label>
+          <label className="block text-xs font-medium text-[#1A2240] mb-1">Tipo de interés</label>
           <div className="flex gap-1 mb-2">
             {(Object.keys(RATES) as (keyof typeof RATES)[]).map((t) => (
               <button
@@ -176,8 +176,8 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
                 onClick={() => handleTipoChange(t)}
                 className={`flex-1 py-1.5 text-xs border transition-colors ${
                   tipoInteres === t
-                    ? "bg-[#1B2B4B] text-white border-[#1B2B4B]"
-                    : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#1B2B4B]"
+                    ? "bg-[#1A2240] text-white border-[#1A2240]"
+                    : "border-[#C8D4E0] text-[#1A2240] hover:border-[#1A2240]"
                 }`}
               >
                 {RATES[t].label}
@@ -192,7 +192,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
               max={10}
               value={tasa}
               onChange={(e) => setTasa(Number(e.target.value))}
-              className="w-24 border border-[#DDD8CE] px-3 py-1.5 text-sm focus:outline-none focus:border-[#1B2B4B]"
+              className="w-24 border border-[#C8D4E0] px-3 py-1.5 text-sm focus:outline-none focus:border-[#1A2240]"
             />
             <span className="text-sm text-[#6B7280]">% TIN</span>
           </div>
@@ -201,13 +201,13 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
 
         {/* Tipo inmueble */}
         <div className="sm:col-span-2">
-          <label className="block text-xs font-medium text-[#1B2B4B] mb-2">Tipo de inmueble</label>
+          <label className="block text-xs font-medium text-[#1A2240] mb-2">Tipo de inmueble</label>
           <div className="flex gap-2">
             <button
               type="button"
               onClick={() => setEsObra(false)}
               className={`px-4 py-1.5 text-xs border transition-colors ${
-                !esObra ? "bg-[#1B2B4B] text-white border-[#1B2B4B]" : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#1B2B4B]"
+                !esObra ? "bg-[#1A2240] text-white border-[#1A2240]" : "border-[#C8D4E0] text-[#1A2240] hover:border-[#1A2240]"
               }`}
             >
               Segunda mano (ITP {itp} %)
@@ -216,7 +216,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
               type="button"
               onClick={() => setEsObra(true)}
               className={`px-4 py-1.5 text-xs border transition-colors ${
-                esObra ? "bg-[#1B2B4B] text-white border-[#1B2B4B]" : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#1B2B4B]"
+                esObra ? "bg-[#1A2240] text-white border-[#1A2240]" : "border-[#C8D4E0] text-[#1A2240] hover:border-[#1A2240]"
               }`}
             >
               Obra nueva (IVA 10 % + AJD {ajd} %)
@@ -226,16 +226,16 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
       </div>
 
       {/* Resultado principal */}
-      <div className="mt-6 bg-[#1B2B4B] p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="mt-6 bg-[#1A2240] p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-center sm:text-left">
-          <p className="text-[#C9A84C] text-xs tracking-widest uppercase mb-1">Cuota mensual estimada</p>
-          <p className="text-[#F5F0E8] text-4xl font-semibold">{formatEur(cuotaMensual)}<span className="text-lg font-light">/mes</span></p>
-          <p className="text-[#F5F0E8]/50 text-xs mt-1">Préstamo {formatEur(prestamo)} · {anos} años · {tasa} % TIN</p>
+          <p className="text-[#2E6DA4] text-xs tracking-widest uppercase mb-1">Cuota mensual estimada</p>
+          <p className="text-[#F0F4F8] text-4xl font-semibold">{formatEur(cuotaMensual)}<span className="text-lg font-light">/mes</span></p>
+          <p className="text-[#F0F4F8]/50 text-xs mt-1">Préstamo {formatEur(prestamo)} · {anos} años · {tasa} % TIN</p>
         </div>
         <div className="text-center sm:text-right">
-          <p className="text-[#F5F0E8]/60 text-xs mb-1">Total intereses</p>
-          <p className="text-[#C9A84C] text-xl font-semibold">{formatEur(totalIntereses)}</p>
-          <p className="text-[#F5F0E8]/60 text-xs mt-1">Total devuelto: {formatEur(totalPagado)}</p>
+          <p className="text-[#F0F4F8]/60 text-xs mb-1">Total intereses</p>
+          <p className="text-[#2E6DA4] text-xl font-semibold">{formatEur(totalIntereses)}</p>
+          <p className="text-[#F0F4F8]/60 text-xs mt-1">Total devuelto: {formatEur(totalPagado)}</p>
         </div>
       </div>
 
@@ -244,7 +244,7 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
         <button
           type="button"
           onClick={() => setExpanded(!expanded)}
-          className="w-full flex items-center justify-between text-sm text-[#1B2B4B] font-medium py-3 border-b border-[#DDD8CE] hover:text-[#C9A84C] transition-colors"
+          className="w-full flex items-center justify-between text-sm text-[#1A2240] font-medium py-3 border-b border-[#C8D4E0] hover:text-[#2E6DA4] transition-colors"
         >
           <span>Desglose de gastos e impuestos</span>
           {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -256,8 +256,8 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
             <Row label={`Entrada (${entradaPct} %)`} value={`− ${formatEur(entrada)}`} />
             <Row label="Importe financiado" value={formatEur(prestamo)} />
 
-            <div className="border-t border-[#DDD8CE] pt-3 mt-3">
-              <p className="text-xs font-semibold text-[#1B2B4B] uppercase tracking-wide mb-2">Impuestos y gastos</p>
+            <div className="border-t border-[#C8D4E0] pt-3 mt-3">
+              <p className="text-xs font-semibold text-[#1A2240] uppercase tracking-wide mb-2">Impuestos y gastos</p>
               <Row label={impuestos.nombre} value={formatEur(impuestos.importe)} sub />
               {esObra && ajd > 0 && (
                 <Row label={`AJD escritura compraventa (${ajd} %)`} value={formatEur(ajdImporte)} sub />
@@ -267,14 +267,14 @@ export function MortgageCalculator({ precioPropiedadInicial }: Props) {
               <Row label="Tasación bancaria (estimado)" value={formatEur(TASACION_FIJA)} sub />
             </div>
 
-            <div className="border-t border-[#DDD8CE] pt-3 mt-3 space-y-2">
+            <div className="border-t border-[#C8D4E0] pt-3 mt-3 space-y-2">
               <Row label="Total gastos e impuestos" value={formatEur(totalGastos)} />
               <Row label={`Desembolso inicial (entrada + gastos)`} value={formatEur(totalDesembolso)} bold accent />
               <Row label="Coste total de la operación" value={formatEur(totalCompra + totalIntereses)} bold />
             </div>
 
-            <div className="mt-4 flex gap-2 p-3 bg-[#F5F0E8] text-xs text-[#6B7280]">
-              <Info size={14} className="shrink-0 text-[#C9A84C] mt-0.5" />
+            <div className="mt-4 flex gap-2 p-3 bg-[#F0F4F8] text-xs text-[#6B7280]">
+              <Info size={14} className="shrink-0 text-[#2E6DA4] mt-0.5" />
               <p>
                 Cálculo orientativo. Los tipos impositivos son los generales vigentes en 2024 para cada comunidad autónoma.
                 Pueden existir reducciones para jóvenes, familia numerosa, VPO u otras bonificaciones autonómicas.
@@ -294,9 +294,9 @@ function Row({
   label: string; value: string; bold?: boolean; sub?: boolean; accent?: boolean;
 }) {
   return (
-    <div className={`flex justify-between ${sub ? "text-[#6B7280]" : "text-[#1B2B4B]"}`}>
+    <div className={`flex justify-between ${sub ? "text-[#6B7280]" : "text-[#1A2240]"}`}>
       <span className={`${sub ? "pl-3 text-xs" : ""} ${bold ? "font-semibold" : ""}`}>{label}</span>
-      <span className={`${bold ? "font-semibold" : ""} ${accent ? "text-[#C9A84C]" : ""}`}>{value}</span>
+      <span className={`${bold ? "font-semibold" : ""} ${accent ? "text-[#2E6DA4]" : ""}`}>{value}</span>
     </div>
   );
 }

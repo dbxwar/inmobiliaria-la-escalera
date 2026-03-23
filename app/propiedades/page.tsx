@@ -4,6 +4,7 @@ import { NavbarInner } from "@/components/navbar-inner";
 import { Footer } from "@/components/footer";
 import { getPropiedadesFiltradas } from "@/lib/actions";
 import { Propiedad } from "@/lib/supabase";
+import { config } from "@/lib/config";
 
 const tipoLabels: Record<string, string> = {
   piso: "Piso",
@@ -29,10 +30,10 @@ export async function generateMetadata({
   const { operacion } = await searchParams;
   const title =
     operacion === "venta"
-      ? "Propiedades en venta | La Escalera"
+      ? `Propiedades en venta | ${config.agencia}`
       : operacion === "alquiler"
-      ? "Propiedades en alquiler | La Escalera"
-      : "Todas las propiedades | La Escalera";
+      ? `Propiedades en alquiler | ${config.agencia}`
+      : `Todas las propiedades | ${config.agencia}`;
   return { title };
 }
 
@@ -54,26 +55,26 @@ export default async function PropiedadesPage({
   return (
     <>
       <NavbarInner />
-      <main className="pt-20 min-h-screen bg-[#F5F0E8]">
+      <main className="pt-20 min-h-screen bg-[#F0F4F8]">
         {/* Header */}
-        <div className="bg-[#1B2B4B] py-12 px-6 lg:px-10">
+        <div className="bg-[#1A2240] py-12 px-6 lg:px-10">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[#C9A84C] tracking-[0.4em] uppercase text-xs font-medium mb-3">
+            <p className="text-[#2E6DA4] tracking-[0.4em] uppercase text-xs font-medium mb-3">
               Comunidad Valenciana
             </p>
-            <h1 className="text-[#F5F0E8] text-3xl sm:text-4xl font-light">{heading}</h1>
+            <h1 className="text-[#F0F4F8] text-3xl sm:text-4xl font-light">{heading}</h1>
           </div>
         </div>
 
         {/* Filters */}
-        <div className="border-b border-[#DDD8CE] bg-white sticky top-20 z-10">
+        <div className="border-b border-[#C8D4E0] bg-white sticky top-20 z-10">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center gap-3 py-3 overflow-x-auto scrollbar-hide">
             <Link
               href="/propiedades"
               className={`px-4 py-1.5 text-sm border transition-colors whitespace-nowrap ${
                 !operacion
-                  ? "bg-[#1B2B4B] text-white border-[#1B2B4B]"
-                  : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#1B2B4B]"
+                  ? "bg-[#1A2240] text-white border-[#1A2240]"
+                  : "border-[#C8D4E0] text-[#1A2240] hover:border-[#1A2240]"
               }`}
             >
               Todo
@@ -82,8 +83,8 @@ export default async function PropiedadesPage({
               href="/propiedades?operacion=venta"
               className={`px-4 py-1.5 text-sm border transition-colors whitespace-nowrap ${
                 operacion === "venta"
-                  ? "bg-[#1B2B4B] text-white border-[#1B2B4B]"
-                  : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#1B2B4B]"
+                  ? "bg-[#1A2240] text-white border-[#1A2240]"
+                  : "border-[#C8D4E0] text-[#1A2240] hover:border-[#1A2240]"
               }`}
             >
               Venta
@@ -92,21 +93,21 @@ export default async function PropiedadesPage({
               href="/propiedades?operacion=alquiler"
               className={`px-4 py-1.5 text-sm border transition-colors whitespace-nowrap ${
                 operacion === "alquiler"
-                  ? "bg-[#1B2B4B] text-white border-[#1B2B4B]"
-                  : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#1B2B4B]"
+                  ? "bg-[#1A2240] text-white border-[#1A2240]"
+                  : "border-[#C8D4E0] text-[#1A2240] hover:border-[#1A2240]"
               }`}
             >
               Alquiler
             </Link>
-            <span className="w-px h-5 bg-[#DDD8CE]" />
+            <span className="w-px h-5 bg-[#C8D4E0]" />
             {["piso", "casa", "chalet", "atico", "local", "terreno"].map((t) => (
               <Link
                 key={t}
                 href={`/propiedades?${operacion ? `operacion=${operacion}&` : ""}tipo=${t}`}
                 className={`px-4 py-1.5 text-sm border transition-colors whitespace-nowrap ${
                   tipo === t
-                    ? "bg-[#C9A84C] text-[#1B2B4B] border-[#C9A84C]"
-                    : "border-[#DDD8CE] text-[#1B2B4B] hover:border-[#C9A84C]"
+                    ? "bg-[#2E6DA4] text-[#1A2240] border-[#2E6DA4]"
+                    : "border-[#C8D4E0] text-[#1A2240] hover:border-[#2E6DA4]"
                 }`}
               >
                 {tipoLabels[t]}
@@ -152,39 +153,39 @@ function PropertyCard({ propiedad }: { propiedad: Propiedad }) {
             alt={propiedad.titulo}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <span className="absolute top-3 left-3 bg-[#C9A84C] text-[#1B2B4B] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 capitalize">
+          <span className="absolute top-3 left-3 bg-[#2E6DA4] text-[#1A2240] text-[10px] font-semibold tracking-widest uppercase px-2.5 py-1 capitalize">
             {propiedad.operacion}
           </span>
-          <div className="absolute bottom-0 left-0 right-0 bg-[#1B2B4B]/80 py-2 px-3">
-            <span className="text-[#C9A84C] font-semibold text-lg">
+          <div className="absolute bottom-0 left-0 right-0 bg-[#1A2240]/80 py-2 px-3">
+            <span className="text-[#2E6DA4] font-semibold text-lg">
               {formatPrice(propiedad.precio)}
             </span>
           </div>
         </div>
         <div className="p-4">
-          <h3 className="text-[#1B2B4B] font-medium text-sm leading-snug mb-2 group-hover:text-[#C9A84C] transition-colors line-clamp-2">
+          <h3 className="text-[#1A2240] font-medium text-sm leading-snug mb-2 group-hover:text-[#2E6DA4] transition-colors line-clamp-2">
             {propiedad.titulo}
           </h3>
           <div className="flex items-center gap-1 text-[#6B7280] text-xs mb-3">
-            <MapPin size={12} className="text-[#C9A84C]" />
+            <MapPin size={12} className="text-[#2E6DA4]" />
             <span>{propiedad.municipio}</span>
           </div>
-          <div className="flex items-center gap-4 border-t border-[#EDE8DD] pt-3">
+          <div className="flex items-center gap-4 border-t border-[#E4ECF4] pt-3">
             {propiedad.habitaciones != null && (
-              <span className="flex items-center gap-1 text-xs text-[#1B2B4B]">
-                <Bed size={12} className="text-[#C9A84C]" />
+              <span className="flex items-center gap-1 text-xs text-[#1A2240]">
+                <Bed size={12} className="text-[#2E6DA4]" />
                 {propiedad.habitaciones}
               </span>
             )}
             {propiedad.banos != null && (
-              <span className="flex items-center gap-1 text-xs text-[#1B2B4B]">
-                <Bath size={12} className="text-[#C9A84C]" />
+              <span className="flex items-center gap-1 text-xs text-[#1A2240]">
+                <Bath size={12} className="text-[#2E6DA4]" />
                 {propiedad.banos}
               </span>
             )}
             {propiedad.metros_cuadrados != null && (
-              <span className="flex items-center gap-1 text-xs text-[#1B2B4B]">
-                <Maximize2 size={12} className="text-[#C9A84C]" />
+              <span className="flex items-center gap-1 text-xs text-[#1A2240]">
+                <Maximize2 size={12} className="text-[#2E6DA4]" />
                 {propiedad.metros_cuadrados} m²
               </span>
             )}

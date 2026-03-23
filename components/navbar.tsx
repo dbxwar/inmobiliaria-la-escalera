@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { config } from "@/lib/config";
 
 const navLinks = [
   { label: "Comprar", href: "/propiedades?operacion=venta" },
   { label: "Alquilar", href: "/propiedades?operacion=alquiler" },
   { label: "Propiedades", href: "/propiedades" },
+  { label: "Gestión de Alquiler", href: "/gestion-alquiler" },
   { label: "Sobre Nosotros", href: "/#nosotros" },
   { label: "Contacto", href: "/#contacto" },
 ];
@@ -25,18 +28,13 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#1B2B4B]/95 backdrop-blur-sm shadow-md" : "bg-transparent"
+        scrolled ? "bg-[#1A2240]/95 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-none">
-          <span className="text-[#F5F0E8] font-semibold tracking-[0.2em] uppercase text-sm">
-            Valencia
-          </span>
-          <span className="text-[#C9A84C] font-light tracking-[0.35em] uppercase text-xs">
-            Estates
-          </span>
+        <Link href="/">
+          <Image src={config.logo} alt={config.agencia} width={140} height={50} className="h-12 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
@@ -45,7 +43,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[#F5F0E8]/80 hover:text-[#C9A84C] text-sm tracking-wide transition-colors duration-200"
+              className="text-[#F0F4F8]/80 hover:text-[#2E6DA4] text-sm tracking-wide transition-colors duration-200"
             >
               {item.label}
             </Link>
@@ -55,14 +53,14 @@ export function Navbar() {
         {/* CTA */}
         <Link
           href="/#contacto"
-          className="hidden md:inline-flex items-center px-5 py-2 border border-[#C9A84C] text-[#C9A84C] text-sm tracking-wider uppercase hover:bg-[#C9A84C] hover:text-[#1B2B4B] transition-all duration-200"
+          className="hidden md:inline-flex items-center px-5 py-2 border border-[#2E6DA4] text-[#2E6DA4] text-sm tracking-wider uppercase hover:bg-[#2E6DA4] hover:text-[#1A2240] transition-all duration-200"
         >
           Contactar
         </Link>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-[#F5F0E8] p-2"
+          className="md:hidden text-[#F0F4F8] p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -72,12 +70,12 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#1B2B4B] px-6 pb-6 flex flex-col gap-5">
+        <div className="md:hidden bg-[#1A2240] px-6 pb-6 flex flex-col gap-5">
           {navLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[#F5F0E8]/80 hover:text-[#C9A84C] text-sm tracking-wide transition-colors"
+              className="text-[#F0F4F8]/80 hover:text-[#2E6DA4] text-sm tracking-wide transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {item.label}
